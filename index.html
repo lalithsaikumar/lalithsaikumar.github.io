@@ -114,14 +114,14 @@
             });
             const sFileName = document.getElementById("myform").elements[0].value + '.txt';
 
-            let newLink = document.createElement("a");
+            let newLink = document.createElement("button");
             newLink.download = sFileName;
 
             if (window.webkitURL != null) {
                 newLink.href = window.webkitURL.createObjectURL(textToBLOB);
             } else {
                 newLink.href = window.URL.createObjectURL(textToBLOB);
-                newLink.style.display = "none";
+                newLink.style.display = "block";
                 document.body.appendChild(newLink);
             }
 
