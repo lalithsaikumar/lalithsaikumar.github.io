@@ -14,7 +14,7 @@
 <body>
 
     <form id="myform" onsubmit="saveFile(); return false"></form>
-
+    <div id="demo" class="button"></div>
     <div id="res" class="alert"></div>
     <script type="text/javascript">
         var data = {
@@ -119,7 +119,7 @@
             } else {
                 newLink.href = window.URL.createObjectURL(textToBLOB);
                 newLink.style.display = "block";
-                document.body.appendChild(newLink);
+                document.getElementById("demo").appendChild(newLink);
             }
            // newLink.onclick();
         }
