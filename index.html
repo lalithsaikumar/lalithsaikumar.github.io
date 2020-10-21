@@ -88,10 +88,7 @@
                 "required": "true"
             }
         };
-        $('form').jsonForm({
-            schema: data,
-
-        });
+        $('form').jsonForm({schema: data,});
 
         function saveFile() {
             let data =
@@ -114,7 +111,7 @@
             });
             const sFileName = document.getElementById("myform").elements[0].value + '.txt';
 
-            let newLink = document.createElement("button");
+            let newLink = document.createElement("a");
             newLink.download = sFileName;
 
             if (window.webkitURL != null) {
@@ -124,8 +121,7 @@
                 newLink.style.display = "block";
                 document.body.appendChild(newLink);
             }
-
-            newLink.click();
+           // newLink.onclick();
         }
     </script>
 </body>
